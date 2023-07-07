@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Header from "../../Components/Header/Header";
 import "./Items.css"
 import { useState } from "react";
+import AllItemsTable from "../../Components/AllItemsTable/AllItemsTable";
 
 export default function Items(){
     const [selected, setSelected] = useState("Todos os items")
@@ -18,42 +19,12 @@ export default function Items(){
                     <Link to={"/items"} className={selected === "Todos os items" ? "selected" : ""} onClick={(ev)=>handleSelect(ev.target.innerText)}>Todos os items</Link>
                     <Link to={"/items"} className={selected === "Novo item" ? "selected" : ""} onClick={(ev)=>handleSelect(ev.target.innerText)}>Novo item</Link>
                 </div>
-                
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nome</th>
-                            <th>Em Estoque</th>
-                            <th>Categoria</th>
-                            <th>Ações</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Lorem ipsum dolor sit amet.</td>
-                            <td>7 Wonders</td>
-                            <td>8 unid.</td>
-                            <td>Jogos</td>
-                            <td>
-                                <button className="details">Ver</button>
-                                <button className="update">Atualizar</button>
-                                <button className="delete">Excluir</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Lorem ipsum dolor sit amet.</td>
-                            <td>O senhor dos Anéis</td>
-                            <td>32 unid.</td>
-                            <td>Livros</td>
-                            <td>
-                                <button>Ver</button>
-                                <button>Atualizar</button>
-                                <button>Excluir</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+
+                <AllItemsTable items={[
+                    {id:"Lorem ipsum dolor sit amet.", title:"7 Wonders", qtd: 8, category:"Jogos"},
+                    {id:"Lorem ipsum dolor sit ame", title:"O senhor dos Anéis", qtd: 32, category:"Livros"}
+                ]}/>
+
             </div>
         </>
     )
