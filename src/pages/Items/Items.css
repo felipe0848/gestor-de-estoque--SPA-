@@ -1,4 +1,4 @@
-.NavItems{
+.navItems{
     margin-bottom: 1rem;
     padding: 1rem 0 0 1rem;
     display: flex;
@@ -8,4 +8,20 @@
 .selected{
     font-weight: 500;
     border-bottom: 1px solid #213547;
+}
+h2{
+    font-size: 3em;
+    font-weight: 300;
+}
+button{
+    margin: 0.25rem;
+}
+.details{
+    background-color: rgb(48, 124, 175);
+}
+.update{
+    background-color: #b8b8b8;
+}
+.delete{
+    background-color: #e23131;
 }

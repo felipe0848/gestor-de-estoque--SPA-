@@ -14,10 +14,11 @@ export default function Items(){
             <Header/>
             <div className="container">
                 <h2>Stock Items</h2>
-                <div className="NavItems">
+                <div className="navItems">
                     <Link to={"/items"} className={selected === "Todos os items" ? "selected" : ""} onClick={(ev)=>handleSelect(ev.target.innerText)}>Todos os items</Link>
                     <Link to={"/items"} className={selected === "Novo item" ? "selected" : ""} onClick={(ev)=>handleSelect(ev.target.innerText)}>Novo item</Link>
                 </div>
+                
                 <table>
                     <thead>
                         <tr>
@@ -35,9 +36,9 @@ export default function Items(){
                             <td>8 unid.</td>
                             <td>Jogos</td>
                             <td>
-                                <button>Ver</button>
-                                <button>Atualizar</button>
-                                <button>Excluir</button>
+                                <button className="details">Ver</button>
+                                <button className="update">Atualizar</button>
+                                <button className="delete">Excluir</button>
                             </td>
                         </tr>
                         <tr>
