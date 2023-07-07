@@ -10,9 +10,9 @@ export default function CriticStockTable({itens}){
                 </tr>
             </thead>
             <tbody>
-                {itens.map(({ title, qtd })=>{
+                {itens.map(({ id, title, qtd })=>{
                     return(
-                        <tr>
+                        <tr key={id}>
                             <td>{title}</td>
                             <td>{qtd}</td>
                             <td><button>Ver</button></td>

@@ -14,7 +14,7 @@ export default function AllItemsTable({items}){
                 <tbody>
                     {items.map(({ id, title, qtd, category })=>{
                         return(
-                            <tr>
+                            <tr key={id}>
                                 <td>{id}</td>
                                 <td>{title}</td>
                                 <td>{qtd} unid.</td>
