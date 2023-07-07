@@ -5,12 +5,12 @@ export default function Header(){
     return(
         <header>
             <div className="logo">
-            <h1>React Stock</h1>
+            <Link to="/"> <h1>React Stock</h1> </Link>
             </div>
             
             <nav>
                 <Link to="/">Home</Link>
-                <Link to="/">Items</Link>
+                <Link to="/items">Items</Link>
             </nav>
         </header>
     )

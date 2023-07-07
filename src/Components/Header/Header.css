@@ -14,13 +14,19 @@ nav{
     gap: 15px;
 }
 
-nav > a{
-    font-size: 1.2rem;
+a{
     color: inherit;
     text-decoration: none;
 }
 
-nav > a:hover{
+a:hover{
     color: inherit;
+}
+
+nav > a{
+    font-size: 1.2rem;
+}
+
+nav > a:hover{
     text-decoration: underline;
 }
