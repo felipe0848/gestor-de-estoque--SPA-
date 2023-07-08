@@ -8,7 +8,6 @@ export default function HeaderItems(){
     
     return(
         <>
-            <Header/>
             <div className="container">
                 <h2>Stock Items</h2>
                 <div className="navItems">

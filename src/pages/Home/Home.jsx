@@ -8,13 +8,11 @@ import "./Home.css"
 export default function Home(){
     return(
         <>
-            <Header/>
-
             <div className="container">
             <h2>Dashboard</h2>
                 <div className="cards">
                     <Card label={"Diversidade de itens"} qtd={2}/>
-                    <Card label={"Iventário total"} qtd={40}/>
+                    <Card label={"Inventário total"} qtd={40}/>
                     <Card label={"Itens recentes"} qtd={2}/>
                     <Card label={"Itens acabando"} qtd={1}/>
 

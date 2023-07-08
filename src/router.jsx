@@ -4,29 +4,37 @@ import ErrorPage from './pages/ErrorPage'
 import Items from './pages/Items/Items'
 import NewItem from './pages/NewItem/NewItem'
 import HeaderItems from './pages/HeaderItems/HeaderItems'
+import Page from './pages/Page'
 
 
 
  const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home/>,
-    errorElement: <ErrorPage/>
-  },
-  {
-    path: "/items",
-    element: <HeaderItems/>,
+    element: <Page/>,
     children: [
-    {
-      path: "",
-      element: <Items/>
-    },
-    {
-      path: "new-item",
-      element: <NewItem/>
-
-    },
-  ]
+      {
+        path: "",
+        element: <Home/>,
+        errorElement: <ErrorPage/>
+      },
+      {
+        path: "/items",
+        element: <HeaderItems/>,
+        children: [
+        {
+          path: "",
+          element: <Items/>
+        },
+        {
+          path: "new-item",
+          element: <NewItem/>
+    
+        },
+      ]
+      },
+  
+    ]
   },
 ])
 
