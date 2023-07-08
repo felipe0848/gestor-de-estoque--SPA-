@@ -1,4 +1,4 @@
-form{
+.FormNewItem{
     display: flex;
     flex-direction: column;
     margin: 0 1.5rem;
@@ -10,6 +10,7 @@ form{
     flex-grow: 1;
 }
 .input > input{
+    font-family: inherit;
     font-size: 1.3em;
     padding: 0.2rem 0.5rem;
 }
@@ -19,7 +20,12 @@ form{
     flex-wrap: wrap;
 }
 
-button{
+#Description{
+    font-family: inherit;
+    padding: 0.2rem 0.5rem;
+}
+
+.ButtonSubmit{
     padding: .75rem 1.2rem;
     background-color: #b8b8b8;
     font-size: 1.2rem;

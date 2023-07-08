@@ -9,7 +9,7 @@
     font-weight: 500;
     border-bottom: 1px solid #213547;
 }
-h2{
+.container > h2{
     font-size: 3em;
     font-weight: 300;
 }

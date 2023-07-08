@@ -1,6 +1,3 @@
-import { Link } from "react-router-dom";
-import Header from "../../Components/Header/Header";
-import "./Items.css"
 import AllItemsTable from "../../Components/AllItemsTable/AllItemsTable";
 
 export default function Items(){

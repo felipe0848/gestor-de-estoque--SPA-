@@ -1,3 +1,5 @@
+import "./AllItemsTable.css"
+
 export default function AllItemsTable({items}){
     return(
         <>
@@ -19,7 +21,7 @@ export default function AllItemsTable({items}){
                                 <td>{title}</td>
                                 <td>{qtd} unid.</td>
                                 <td>{category}</td>
-                                <td>
+                                <td className="tableButtons">
                                     <button className="details">Ver</button>
                                     <button className="update">Atualizar</button>
                                     <button className="delete">Excluir</button>

@@ -2,8 +2,8 @@ import "./Footer.css"
 
 export default function Footer(){
     return(
-        <div>
+        <footer>
             <p>Feito com React e React Router!</p>
-        </div>
+        </footer>
     )
 }

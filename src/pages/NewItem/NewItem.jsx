@@ -3,7 +3,7 @@ import "./NewItem.css"
 export default function NewItem(){
     return(
         <>
-            <form>
+            <form className="FormNewItem">
                 <div className="inputs">
                     <div className="input">
                         <label htmlFor="name">Nome:</label>
@@ -29,7 +29,7 @@ export default function NewItem(){
                     </div>
                 </div>
                 <div>
-                    <button type="submit">Salvar</button>
+                    <button type="submit" className="ButtonSubmit">Salvar</button>
                 </div>
             </form>
         </>
