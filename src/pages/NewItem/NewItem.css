@@ -1,21 +1,27 @@
-.navItems{
-    margin-bottom: 1rem;
-    padding: 1rem 0 0 1rem;
+form{
     display: flex;
-    gap: 15px;
-    border-bottom: 1px solid #213547;
+    flex-direction: column;
+    margin: 0 1.5rem;
+    row-gap: 1rem;
 }
-.selected{
-    font-weight: 500;
-    border-bottom: 1px solid #213547;
+.input{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
-h2{
-    font-size: 3em;
-    font-weight: 300;
+.input > input{
+    font-size: 1.3em;
+    padding: 0.2rem 0.5rem;
 }
+.inputs{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
 button{
-    margin: 0.25rem;
-}
-.details{
-    background-color: rgb(48, 124, 175);
+    padding: .75rem 1.2rem;
+    background-color: #b8b8b8;
+    font-size: 1.2rem;
+    font-weight: 500;
 }

@@ -1,6 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
-import Header from "../../Components/Header/Header";
 import { useState } from "react";
+import "./HeaderItems.css"
 
 export default function HeaderItems(){
     const [selected, setSelected] = useState("allItems")
