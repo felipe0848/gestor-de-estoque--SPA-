@@ -23,13 +23,22 @@ export default function useItemsCollection(){
         const id = randomString.substring(0,8) + "-" + randomString.substring(8,12) + "-" + randomString.substring(12,16) + "-" + randomString.substring(16,20) + "-" + randomString.substring(20,32)
         
         const item = {id, name, qtd, price, category, description}
-        setItemsInStock((state)=>{
-            const itemsArray = [item, ...state]
+        setItemsInStock((itemsInStock)=>{
+            const itemsArray = [item, ...itemsInStock]
             localStorage.setItem('items-storage', JSON.stringify(itemsArray))
             return itemsArray
         })
 
     }
 
-    return( [itemsInStock, saveItem] )
+    const removeItem = (id)=>{
+
+        setItemsInStock((itemsInStock)=>{
+            const itemsArray = itemsInStock.filter((item)=> item.id !== id )
+            localStorage.setItem('items-storage', JSON.stringify(itemsArray))
+            return itemsArray
+        })
+    }
+
+return( { itemsInStock, saveItem, removeItem } )
 }

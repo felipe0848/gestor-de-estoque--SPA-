@@ -3,7 +3,7 @@ import "./NewItem.css"
 import useItemsCollection from "../../hooks/useItemsCollection"
 
 export default function NewItem(){
-    const [ itemsInStock, saveItem ] = useItemsCollection()
+    const { saveItem }  = useItemsCollection()
     const [ name, setName ] = useState('')
     const [ qtd, setQtd ] = useState(0)
     const [ price, setPrice ] = useState(0)
