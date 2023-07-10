@@ -9,10 +9,10 @@ export default function RecentsTable({itens}){
                 </tr>
             </thead>
             <tbody>
-                { itens.map(({id, title})=>{
+                { itens.map(({id, name})=>{
                     return(
                         <tr key={id}>
-                            <td>{title}</td>
+                            <td>{name}</td>
                             <td><button>Ver</button></td>
                         </tr>
                     )

@@ -22,7 +22,7 @@
     cursor: pointer;
 }
 
-.card:hover{
+.cardHover:hover{
     border: 1px solid #213547;
     border-radius: .5rem;
 }

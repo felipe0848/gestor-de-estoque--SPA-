@@ -10,10 +10,10 @@ export default function CriticStockTable({itens}){
                 </tr>
             </thead>
             <tbody>
-                {itens.map(({ id, title, qtd })=>{
+                {itens.map(({ id, name, qtd })=>{
                     return(
                         <tr key={id}>
-                            <td>{title}</td>
+                            <td>{name}</td>
                             <td>{qtd}</td>
                             <td><button>Ver</button></td>
                         </tr>
