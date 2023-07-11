@@ -4,11 +4,12 @@ import useItemsCollection from "../../hooks/useItemsCollection";
 export default function PageItem() {
   const { removeItem, itemsInStock } = useItemsCollection();
 
-  const id = "b80od4mt-11mc-o7bk-ute7-3xc8ze7jkw83";
-  const [{ name, qtd, price, category, description }] = itemsInStock.filter(
+  const id = "5hkfmfr2-4x3i-6cnf-z378-as0gzcsb7ey3";
+  const [{ name, qtd, price, category, description, createAt, updateAt }] = itemsInStock.filter(
     (current) => current.id === id
   );
-
+    const createDate = new Date (createAt)
+    const updateDate = new Date (updateAt)
   return (
     <>
       <div className="title">
@@ -29,8 +30,8 @@ export default function PageItem() {
         <p>{description}</p>
       </div>
       <div className="dates">
-        <p>Cadastrado em: {"11/07/2023 às 08:52"}</p>
-        <p>Atualizado em: {"11/07/2023 às 08:52"}</p>
+        <p>Cadastrado em: {createDate.toLocaleDateString('pt-br') + ' às ' + createDate.toLocaleTimeString('pt-br')}</p>
+        <p>Atualizado em: {updateDate.toLocaleDateString('pt-br') + ' às ' + updateDate.toLocaleTimeString('pt-br')}</p>
       </div>
     </>
   );

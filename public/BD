@@ -1,1 +1,22 @@
-[{"id":"b80od4mt-11mc-o7bk-ute7-3xc8ze7jkw83","name":"7 Wonders","qtd":"8","price":"100","category":"Jogos","description":"7 Wonders é um jogo de tabuleiro criado por Antoine Bauza e ilustrado por Miguel Coimbra em 2010,"},{"id":"248452t1-fa4x-tckm-ubu0-r5thdm8y6cax","name":"O Senhor dos Anéis","qtd":"32","price":"49.90","category":"Livros","description":"O Senhor dos Anéis é um livro de alta fantasia, escrito pelo escritor britânico J. R. R. Tolkien. Escrita entre 1937 e 1949, com muitas partes criadas durante a Segunda Guerra Mundial,"}]
+[
+  {
+    "id": "0ko020vh-wucu-brqb-vqid-r2jyqqi00478",
+    "name": "O Senhor dos Anéis",
+    "qtd": "32",
+    "price": "49.90",
+    "category": "Livros",
+    "description": "O Senhor dos Anéis é um livro de alta fantasia, escrito pelo escritor britânico J. R. R. Tolkien. Escrita entre 1937 e 1949, com muitas partes criadas durante a Segunda Guerra Mundial.",
+    "createAt": "2023-07-11T13:41:01.441Z",
+    "updateAt": "2023-07-11T13:41:01.441Z"
+  },
+  {
+    "id": "5hkfmfr2-4x3i-6cnf-z378-as0gzcsb7ey3",
+    "name": "7 Wonders",
+    "qtd": "8",
+    "price": "100",
+    "category": "Jogos",
+    "description": "7 Wonders é um jogo de tabuleiro criado por Antoine Bauza e ilustrado por Miguel Coimbra em 2010.",
+    "createAt": "2023-07-11T13:40:19.456Z",
+    "updateAt": "2023-07-11T13:40:19.456Z"
+  }
+]
