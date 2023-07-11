@@ -5,6 +5,7 @@ import Items from './pages/Items/Items'
 import NewItem from './pages/NewItem/NewItem'
 import HeaderItems from './pages/HeaderItems/HeaderItems'
 import Page from './pages/Page'
+import PageItem from './pages/PageItem/PageItem'
 
 
 
@@ -29,6 +30,11 @@ import Page from './pages/Page'
         {
           path: "new-item",
           element: <NewItem/>
+    
+        },
+        {
+          path: "id",
+          element: <PageItem/>
     
         },
       ]

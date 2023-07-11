@@ -12,6 +12,7 @@ export default function Home(){
     const recentesItems = itemsInStock
     const criticItems = itemsInStock.filter(item => +item.qtd < 10)
     const qtdTotal = itemsInStock.reduce((accum, item) => accum + +item.qtd, 0)
+    
     return(
         <>
             <div className="container">
