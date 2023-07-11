@@ -27,10 +27,12 @@ export default function Items(){
                                 <td>{qtd} unid.</td>
                                 <td>{category}</td>
                                 <td className="tableButtons">
-                                    <Link to={`${id}`}>
+                                    <Link to={id}>
                                         <Button className="details" text='Ver' />
                                     </Link>
-                                    <Button className="update" text='Atualizar' />
+                                    <Link to={`new-item/${id}`}>                                        
+                                        <Button className="update" text='Atualizar' />
+                                    </Link>
                                     <Button className="delete" onClick={()=>removeItem(id)} text='Excluir'/>
                                 </td>
                             </tr>

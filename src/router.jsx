@@ -27,13 +27,18 @@ import PageItem from './pages/PageItem/PageItem'
           element: <Items/>
         },
         {
-          path: "new-item",
+          path: ":itemId",
+          element: <PageItem/>
+    
+        },
+        {
+          path: "new-item/",
           element: <NewItem/>
     
         },
         {
-          path: ":itemId",
-          element: <PageItem/>
+          path: "new-item/:itemId",
+          element: <NewItem/>
     
         },
       ]
