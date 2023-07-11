@@ -1,6 +1,8 @@
 import Button from "../../Components/Button/Button";
+import useItemsCollection from "../../hooks/useItemsCollection";
 
 export default function PageItem(){
+    const {removeItem} = useItemsCollection()
     return(
         <>
         <div className="title">
@@ -16,7 +18,7 @@ export default function PageItem(){
         <div className="description">
             <p>{"Jogo de tabuleiro para vários jogadores"}</p>
         </div>
-        <div className="">
+        <div className="dates">
             <p>Cadastrado em: {'11/07/2023 às 08:52'}</p>
             <p>Atualizado em: {'11/07/2023 às 08:52'}</p>
         </div>

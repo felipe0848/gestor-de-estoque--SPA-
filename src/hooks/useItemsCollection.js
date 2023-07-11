@@ -32,12 +32,13 @@ export default function useItemsCollection(){
     }
 
     const removeItem = (id)=>{
-
-        setItemsInStock((itemsInStock)=>{
-            const itemsArray = itemsInStock.filter((item)=> item.id !== id )
-            localStorage.setItem('items-storage', JSON.stringify(itemsArray))
-            return itemsArray
-        })
+        if (confirm("Tem certeza que deseja apagar esse item?")){
+            setItemsInStock((itemsInStock)=>{
+                const itemsArray = itemsInStock.filter((item)=> item.id !== id )
+                localStorage.setItem('items-storage', JSON.stringify(itemsArray))
+                return itemsArray
+            })
+        }
     }
 
 return( { itemsInStock, saveItem, removeItem } )
