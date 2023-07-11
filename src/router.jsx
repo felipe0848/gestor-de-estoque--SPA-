@@ -17,7 +17,6 @@ import PageItem from './pages/PageItem/PageItem'
       {
         path: "",
         element: <Home/>,
-        errorElement: <ErrorPage/>
       },
       {
         path: "/items",
@@ -39,8 +38,8 @@ import PageItem from './pages/PageItem/PageItem'
         },
       ]
       },
-  
-    ]
+    ],
+    errorElement: <ErrorPage/>
   },
 ])
 
