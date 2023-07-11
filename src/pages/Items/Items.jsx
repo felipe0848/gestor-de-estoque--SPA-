@@ -1,3 +1,4 @@
+import Button from "../../Components/Button/Button";
 import useItemsCollection from "../../hooks/useItemsCollection";
 import "./Items.css"
 
@@ -24,9 +25,9 @@ export default function Items(){
                                 <td>{qtd} unid.</td>
                                 <td>{category}</td>
                                 <td className="tableButtons">
-                                    <button className="details">Ver</button>
-                                    <button className="update">Atualizar</button>
-                                    <button className="delete" onClick={()=>removeItem(id)}>Excluir</button>
+                                    <Button className="details" text='Ver' />
+                                    <Button className="update" text='Atualizar' />
+                                    <Button className="delete" onClick={()=>removeItem(id)} text='Excluir'/>
                                 </td>
                             </tr>
                         )
