@@ -3,32 +3,31 @@ import "./NewItem.css";
 import useItemsCollection from "../../hooks/useItemsCollection";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 
-
 export default function NewItem() {
   const { saveItem, itemsInStock } = useItemsCollection();
-  const navigate = useNavigate()
-  const { itemId } = useParams()
-  
-  const item = itemsInStock.find((current)=> current.id === itemId)
-  
-  const [name, setName] = useState(()=>!!item ? item.name : "");
-  const [qtd, setQtd] = useState(()=>!!item ? item.qtd : 0);
-  const [price, setPrice] = useState(()=>!!item ? item.price : 0);
-  const [category, setCategory] = useState(()=>!!item ? item.category : "");
-  const [description, setDescription] = useState(()=>!!item ? item.description : "");
-  
-  
+  const navigate = useNavigate();
+  const { itemId } = useParams();
+
+  const item = itemsInStock.find((current) => current.id === itemId);
+
+  const [name, setName] = useState(() => (!!item ? item.name : ""));
+  const [qtd, setQtd] = useState(() => (!!item ? item.qtd : 0));
+  const [price, setPrice] = useState(() => (!!item ? item.price : 0));
+  const [category, setCategory] = useState(() => (!!item ? item.category : ""));
+  const [description, setDescription] = useState(() =>
+    !!item ? item.description : ""
+  );
+
   const handleSubmit = (ev) => {
     ev.preventDefault();
-    saveItem({ itemId, name, qtd, price, category, description })
-    !!itemId ? navigate("/items") :
-    setName("");
+    saveItem({ itemId, name, qtd, price, category, description });
+    !!itemId ? navigate("/items") : setName("");
     setQtd(0);
     setPrice(0);
     setCategory("");
     setDescription("");
   };
-  
+
   return (
     <>
       <form className="FormNewItem" onSubmit={handleSubmit}>
@@ -98,7 +97,7 @@ export default function NewItem() {
             Salvar
           </button>
         </div>
-      </form> 
+      </form>
     </>
   );
 }

@@ -3,8 +3,7 @@ import { Link, Outlet, useLocation, useMatch } from "react-router-dom";
 import "./HeaderItems.css";
 
 export default function HeaderItems() {
-  const { pathname } = useLocation()
-
+  const { pathname } = useLocation();
 
   return (
     <>

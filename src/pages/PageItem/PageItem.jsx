@@ -1,13 +1,12 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
 import Button from "../../Components/Button/Button";
 import useItemsCollection from "../../hooks/useItemsCollection";
-import "./PageItem.css"
-
+import "./PageItem.css";
 
 export default function PageItem() {
   const { removeItem, itemsInStock } = useItemsCollection();
-  const { itemId } = useParams()
-  const navigate = useNavigate()
+  const { itemId } = useParams();
+  const navigate = useNavigate();
 
   const { name, qtd, price, category, description, createAt, updateAt } =
     itemsInStock.find((current) => current.id === itemId);
@@ -18,8 +17,8 @@ export default function PageItem() {
     <div className="container">
       <div className="title">
         <h2>{name}</h2>
-        <Link to={`/items/new-item/${itemId}`}>                                        
-            <Button className="update" text='Atualizar' />
+        <Link to={`/items/new-item/${itemId}`}>
+          <Button className="update" text="Atualizar" />
         </Link>
         <Button
           className="delete"

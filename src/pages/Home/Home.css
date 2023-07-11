@@ -1,47 +1,45 @@
-
-.container{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 0 1.5rem;
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1.5rem;
 }
 
-.cards{
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
+.cards {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.card{
-    background-color: #e7e7e7;
-    min-width: 200px;
-    min-height: 180px;
-    padding: 0.5rem 1rem;
-    flex-grow: 1;
-    cursor: pointer;
-}
-
-.cardHover:hover{
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    border: 1px solid #213547;
-    border-radius: .5rem;
+.card {
+  background-color: #e7e7e7;
+  min-width: 200px;
+  min-height: 180px;
+  padding: 0.5rem 1rem;
+  flex-grow: 1;
+  cursor: pointer;
 }
 
-.result{
-    padding-top: 2rem;
-    font-size: 2em;
-    text-align: center;
+.cardHover:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border: 1px solid #213547;
+  border-radius: 0.5rem;
 }
 
-.tables{
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
+.result {
+  padding-top: 2rem;
+  font-size: 2em;
+  text-align: center;
 }
 
-.table{
-    flex-grow: 1;
-    padding: 0.5rem 1rem;
+.tables {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
+.table {
+  flex-grow: 1;
+  padding: 0.5rem 1rem;
+}

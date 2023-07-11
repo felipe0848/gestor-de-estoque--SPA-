@@ -8,10 +8,10 @@ export default function useItemsCollection() {
   });
 
   const saveItem = ({ itemId, name, qtd, price, category, description }) => {
-    if (!itemId){
+    if (!itemId) {
       const chars = "abcdefghijklmnopqrstuvwxyz0123456789";
       let randomString = "";
-  
+
       for (let i = 0; i < 32; i++) {
         const randomChar = Math.floor(Math.random() * chars.length);
         randomString += chars.substring(randomChar, randomChar + 1);
@@ -29,28 +29,37 @@ export default function useItemsCollection() {
         "-" +
         randomString.substring(20, 32);
 
-        const createAt = new Date()
-        const updateAt = new Date()
+      const createAt = new Date();
+      const updateAt = new Date();
 
-        const item = { id, name, qtd, price, category, description, createAt, updateAt };
-        setItemsInStock((itemsInStock) => {
-          const itemsArray = [item, ...itemsInStock];
-          localStorage.setItem("items-storage", JSON.stringify(itemsArray));
-          return itemsArray;
-        });
-      } else{
-        const itemIndex = itemsInStock.findIndex((current) => current.id === itemId)
-        itemsInStock[itemIndex].name = name
-        itemsInStock[itemIndex].qtd = qtd
-        itemsInStock[itemIndex].price = price
-        itemsInStock[itemIndex].category = category
-        itemsInStock[itemIndex].description = description
-        itemsInStock[itemIndex].updateAt = new Date()
+      const item = {
+        id,
+        name,
+        qtd,
+        price,
+        category,
+        description,
+        createAt,
+        updateAt,
+      };
+      setItemsInStock((itemsInStock) => {
+        const itemsArray = [item, ...itemsInStock];
+        localStorage.setItem("items-storage", JSON.stringify(itemsArray));
+        return itemsArray;
+      });
+    } else {
+      const itemIndex = itemsInStock.findIndex(
+        (current) => current.id === itemId
+      );
+      itemsInStock[itemIndex].name = name;
+      itemsInStock[itemIndex].qtd = qtd;
+      itemsInStock[itemIndex].price = price;
+      itemsInStock[itemIndex].category = category;
+      itemsInStock[itemIndex].description = description;
+      itemsInStock[itemIndex].updateAt = new Date();
 
-        localStorage.setItem("items-storage", JSON.stringify(itemsInStock));
-      }
-      
-
+      localStorage.setItem("items-storage", JSON.stringify(itemsInStock));
+    }
   };
 
   const removeItem = (id) => {
