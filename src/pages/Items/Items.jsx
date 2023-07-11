@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../../Components/Button/Button";
 import useItemsCollection from "../../hooks/useItemsCollection";
 import "./Items.css"
@@ -25,7 +26,9 @@ export default function Items(){
                                 <td>{qtd} unid.</td>
                                 <td>{category}</td>
                                 <td className="tableButtons">
-                                    <Button className="details" text='Ver' />
+                                    <Link to={`${id}`}>
+                                        <Button className="details" text='Ver' />
+                                    </Link>
                                     <Button className="update" text='Atualizar' />
                                     <Button className="delete" onClick={()=>removeItem(id)} text='Excluir'/>
                                 </td>

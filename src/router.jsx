@@ -33,7 +33,7 @@ import PageItem from './pages/PageItem/PageItem'
     
         },
         {
-          path: "id",
+          path: ":itemId",
           element: <PageItem/>
     
         },

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function RecentsTable({itens}){
     return(
         <div className="table">
@@ -13,7 +15,11 @@ export default function RecentsTable({itens}){
                     return(
                         <tr key={id}>
                             <td>{name}</td>
-                            <td><button>Ver</button></td>
+                            <td>
+                                <Link to={`items/${id}`}>                                    
+                                    <button>Ver</button>
+                                </Link>
+                            </td>
                         </tr>
                     )
                 })}
