@@ -7,8 +7,7 @@ import "./PageItem.css"
 export default function PageItem() {
   const { removeItem, itemsInStock } = useItemsCollection();
   const { itemId } = useParams()
-  // alert(itemId)
-  // const id = "5hkfmfr2-4x3i-6cnf-z378-as0gzcsb7ey3";
+
   const { name, qtd, price, category, description, createAt, updateAt } =
     itemsInStock.find((current) => current.id === itemId);
   const createDate = new Date(createAt);

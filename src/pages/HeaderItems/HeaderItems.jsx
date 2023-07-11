@@ -1,9 +1,10 @@
-import { Link, Outlet } from "react-router-dom";
-import { useState } from "react";
+import { Link, Outlet, useLocation, useMatch } from "react-router-dom";
+
 import "./HeaderItems.css";
 
 export default function HeaderItems() {
-  const [selected, setSelected] = useState("allItems");
+  const { pathname } = useLocation()
+
 
   return (
     <>
@@ -12,17 +13,15 @@ export default function HeaderItems() {
         <div className="navItems">
           <Link
             to={"/items"}
-            className={selected === "allItems" ? "selected" : ""}
+            className={pathname === "/items" ? "selected" : ""}
             id="allItems"
-            onClick={(ev) => setSelected(ev.target.id)}
           >
             Todos os items
           </Link>
           <Link
             to={"/items/new-item"}
-            className={selected === "newItem" ? "selected" : ""}
+            className={pathname === "/items/new-item" ? "selected" : ""}
             id="newItem"
-            onClick={(ev) => setSelected(ev.target.id)}
           >
             Novo item
           </Link>

@@ -5,6 +5,7 @@ import "./Items.css"
 
 export default function Items(){
     const { itemsInStock, removeItem } = useItemsCollection()
+
     return(
         <>
             <table>
