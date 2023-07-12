@@ -11,8 +11,8 @@ export default function NewItem() {
   const item = itemsInStock.find((current) => current.id === itemId);
 
   const [name, setName] = useState(() => (!!item ? item.name : ""));
-  const [qtd, setQtd] = useState(() => (!!item ? item.qtd : 0));
-  const [price, setPrice] = useState(() => (!!item ? item.price : 0));
+  const [qtd, setQtd] = useState(() => (!!item ? item.qtd : 1));
+  const [price, setPrice] = useState(() => (!!item ? item.price : 0.01));
   const [category, setCategory] = useState(() => (!!item ? item.category : ""));
   const [description, setDescription] = useState(() =>
     !!item ? item.description : ""
@@ -52,6 +52,10 @@ export default function NewItem() {
               onChange={(e) =>
                 setQtd(e.currentTarget.value > 0 ? e.currentTarget.value : qtd)
               }
+              onClick={(e) => e.currentTarget.select()}
+              onBlur={(e) =>
+                setQtd(parseFloat(e.currentTarget.value).toFixed())
+              }
             />
           </div>
           <div className="input">
@@ -63,10 +67,12 @@ export default function NewItem() {
               value={price}
               onChange={(e) =>
                 setPrice(
-                  e.currentTarget.value > 0
-                    ? parseFloat(e.currentTarget.value).toFixed(2)
-                    : price
+                  e.currentTarget.value >= 0 ? e.currentTarget.value : price
                 )
+              }
+              onClick={(e) => e.currentTarget.select()}
+              onBlur={(e) =>
+                setPrice(parseFloat(e.currentTarget.value).toFixed(2))
               }
             />
           </div>
