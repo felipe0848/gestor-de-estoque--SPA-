@@ -63,7 +63,9 @@ export default function NewItem() {
               value={price}
               onChange={(e) =>
                 setPrice(
-                  e.currentTarget.value > 0 ? e.currentTarget.value : price
+                  e.currentTarget.value > 0
+                    ? parseFloat(e.currentTarget.value).toFixed(2)
+                    : price
                 )
               }
             />
