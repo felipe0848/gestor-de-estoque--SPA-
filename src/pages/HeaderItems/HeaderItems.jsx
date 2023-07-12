@@ -18,8 +18,9 @@ export default function HeaderItems() {
             Todos os items
           </Link>
           <Link
-            to={"/items/new-item/"}
-            className={pathname === "/items/new-item/" ? "selected" : ""}
+            to="/items/new-item"
+            reloadDocument={true}
+            className={pathname === "/items/new-item" ? "selected" : ""}
             id="newItem"
           >
             Novo item
