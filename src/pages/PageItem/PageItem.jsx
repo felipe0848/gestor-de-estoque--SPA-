@@ -22,7 +22,7 @@ export default function PageItem() {
         </Link>
         <Button
           className="delete"
-          onClick={() => (removeItem(itemId), navigate("/"))}
+          onClick={() => (removeItem(itemId), history.back())}
           text="Excluir"
         />
       </div>
